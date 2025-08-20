@@ -1,3 +1,15 @@
 <launch>
-  <test test-name="test_waypoint_node" pkg="tortoisebot_waypoints" type="test_waypoint_node.py" time-limit="30" />
+  <include file="$(find tortoisebot_gazebo)/launch/tortoisebot_playground.launch">
+    <arg name="gui" value="false"/>
+  </include>
+
+  <node pkg="tortoisebot_waypoints"
+        type="tortoisebot_action_server.py"
+        name="waypoints_action_server"
+        output="screen"/>
+
+  <test test-name="waypoints_pytest"
+        pkg="tortoisebot_waypoints"
+        type="test_waypoint_node.py"
+        time-limit="240"/>
 </launch>
