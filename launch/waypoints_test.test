@@ -7,8 +7,8 @@
         type="tortoisebot_action_server.py"
         name="waypoints_action_server"
         output="screen"/>
-  <param name="pre_test_delay" value="10"/>
-  <test test-name="waypoints_pytest"
+
+<test test-name="waypoints_pytest"
         pkg="tortoisebot_waypoints"
         type="test_waypoint_node.py"
         time-limit="240"/>
