@@ -1,3 +1,7 @@
 <launch>
+  <node pkg="tortoisebot_waypoints"
+        type="tortoisebot_action_server.py"
+        name="waypoints_action_server"
+        output="screen" respawn="false" />
   <test test-name="test_waypoint_node" pkg="tortoisebot_waypoints" type="test_waypoint_node.py" time-limit="30" />
 </launch>
